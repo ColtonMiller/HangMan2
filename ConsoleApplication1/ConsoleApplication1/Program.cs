@@ -34,9 +34,10 @@ namespace ConsoleApplication1
         {
             //Start startScreen
             StartScreen();
-            //pick random word from possivbleWords
+            //pick random word from possibleWords
             WordRanomizer(possibleWords);
             MakeWordHidden(actualWord);
+            MakeWordSpace(actualWord);
             //start actual game with a while loop with playing as argument
             while (playing == true)
             {
@@ -59,7 +60,7 @@ namespace ConsoleApplication1
                 Console.WriteLine("Guesses: " + guessesIncrement);
                 Console.WriteLine("");
                 ValidateInput(Console.ReadLine());
-                System.Threading.Thread.Sleep(1000);
+                System.Threading.Thread.Sleep(500);
                 //clear to make the screen look static
                 Console.Clear();      
                 //lives is not 0
@@ -78,7 +79,7 @@ namespace ConsoleApplication1
                     else
                     {
                         Console.WriteLine("Nope!");
-                        System.Threading.Thread.Sleep(1000);
+                        System.Threading.Thread.Sleep(500);
                         Console.Clear();
                         counterLives--;
                     }
